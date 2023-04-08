@@ -17,7 +17,7 @@ public class TimerApplication {
 
 		@Override
 		public void configure() throws Exception {
-			from("timer:my-timer?period=5000")
+			from("timer:my-timer?period=5000&repeatCount=2")
 					.log("Hora: ${date:now:HH:mm:ss}");
 			
 		}
